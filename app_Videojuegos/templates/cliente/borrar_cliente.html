@@ -1,0 +1,9 @@
+{% extends 'cliente/base.html' %}
+{% block content %}
+<h2>¿Estás seguro de que deseas borrar al cliente: {{ cliente.nombre }} {{ cliente.apellido }}?</h2>
+<form method="POST">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-danger"><i class="bi bi-trash"></i> Eliminar</button>
+    <a href="{% url 'ver_clientes' %}" class="btn btn-secondary"><i class="bi bi-x-circle"></i> Cancelar</a>
+</form>
+{% endblock %}

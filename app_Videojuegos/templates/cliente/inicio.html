@@ -1,0 +1,11 @@
+{% extends 'cliente/base.html' %}
+{% block content %}
+    <div class="text-center">
+        <h1>Bienvenido al Sistema de Administración</h1>
+        <p>Gestión básica de Clientes, Empleados y Ventas (Cliente: CRUD; Empleado/Venta: modelos y relaciones).</p>
+        <div class="mt-4">
+            <a href="{% url 'ver_clientes' %}" class="btn btn-primary btn-lg"><i class="bi bi-list"></i> Ver Clientes</a>
+            <a href="{% url 'agregar_cliente' %}" class="btn btn-success btn-lg"><i class="bi bi-person-plus"></i> Agregar Cliente</a>
+        </div>
+    </div>
+{% endblock %}
